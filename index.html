@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A visual timeline of progress in financial AI: CFA exam evaluations, financial agents, and financial benchmarks.">
-<title>Financial AI: Three Timelines of Progress</title>
+<title>Financial AI: Four Timelines of Progress</title>
 <style>
 :root{
   --ink:#172432;--muted:#627180;--line:#dce4ea;--paper:#fbfcfd;
@@ -111,6 +111,7 @@ footer .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wr
   <div class="wrap nav">
     <div class="brand">Financial AI · Research timeline</div>
     <nav aria-label="Main navigation">
+      <a href="#models">Specialized LLMs</a>
       <a href="#cfa">CFA progress</a>
       <a href="#agents">Financial agents</a>
       <a href="#benchmarks">Benchmarks</a>
@@ -121,10 +122,11 @@ footer .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wr
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">A visual guide · 2021–2026</div>
+    <div class="eyebrow">A visual guide · 2019–2026</div>
     <h1>Financial AI is moving from answers to workflows.</h1>
-    <p class="deck">Three timelines explain how language models are learning financial tasks, how agent systems are emerging, and how researchers are measuring progress.</p>
+    <p class="deck">Four timelines trace the evolution of financial LLMs, professional-task evaluations, agent systems, and the benchmarks used to measure progress.</p>
     <div class="hero-meta">
+      <span class="pill">Financial LLMs</span>
       <span class="pill">CFA exam evaluations</span>
       <span class="pill">Financial agents and skills</span>
       <span class="pill">Benchmarks and leaderboards</span>
@@ -141,15 +143,15 @@ footer .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wr
         <a href="https://arxiv.org/abs/2303.17564">BloombergGPT paper ↗</a>
       </article>
       <article class="snap-card">
-        <div class="snap-kicker">02 · Benchmarks</div>
-        <h3>Named tests of financial capability</h3>
+        <div class="snap-kicker">02 · CFA progression</div>
+        <h3>Three levels, harder reasoning</h3>
         <div class="chips">
-          <span class="chip teal">FinQA</span><span class="chip teal">FinanceBench</span>
-          <span class="chip teal">FinBen</span><span class="chip teal">HELM Finance</span>
-          <span class="chip teal">Finance Agent Benchmark</span>
+          <span class="chip">Level I · knowledge</span>
+          <span class="chip">Level II · application</span>
+          <span class="chip">Level III · constructed response</span>
         </div>
-        <p>Numerical reasoning, evidence-grounded Q&amp;A, broad finance tasks and tool-using agents.</p>
-        <a href="https://arxiv.org/abs/2508.00828">Finance Agent Benchmark ↗</a>
+        <p>Studies progressed from early Level I/II tests to all-level evaluations and 2025 Level III essay scoring.</p>
+        <a href="https://arxiv.org/abs/2507.02954">2025 Level III study ↗</a>
       </article>
       <article class="snap-card">
         <div class="snap-kicker">03 · Financial agents</div>
@@ -163,30 +165,98 @@ footer .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wr
         <a href="https://github.com/anthropics/financial-services">See agent catalog ↗</a>
       </article>
       <article class="snap-card">
-        <div class="snap-kicker">04 · CFA progression</div>
-        <h3>Three levels, harder reasoning</h3>
+        <div class="snap-kicker">04 · Benchmarks</div>
+        <h3>Named tests of financial capability</h3>
         <div class="chips">
-          <span class="chip">Level I · knowledge</span>
-          <span class="chip">Level II · application</span>
-          <span class="chip">Level III · constructed response</span>
+          <span class="chip teal">FinQA</span><span class="chip teal">FinanceBench</span>
+          <span class="chip teal">FinBen</span><span class="chip teal">HELM Finance</span>
+          <span class="chip teal">Finance Agent Benchmark</span>
         </div>
-        <p>Studies progressed from early Level I/II tests to all-level evaluations and 2025 Level III essay scoring.</p>
-        <a href="https://arxiv.org/abs/2507.02954">2025 Level III study ↗</a>
+        <p>Numerical reasoning, evidence-grounded Q&amp;A, broad finance tasks and tool-using agents.</p>
+        <a href="https://arxiv.org/abs/2508.00828">Finance Agent Benchmark ↗</a>
       </article>
     </div>
-    <p class="snapshot-caption">A compact map of the field: specialist models, task benchmarks, workflow agents and professional-exam evaluations. These are different evidence types—not one comparable leaderboard.</p>
+    <p class="snapshot-caption">A compact map of the field: financial LLMs, task benchmarks, workflow agents and professional-exam evaluations. These are different evidence types—not one comparable leaderboard.</p>
   </div>
 </section>
 
 <main class="wrap">
   <div class="intro">
-    <p>Financial AI is not one race with one finish line. Exam studies test financial knowledge; benchmarks test specific capabilities; agents combine models with tools and repeatable procedures to complete a workflow. These developments are related—but their scores should not be confused.</p>
-    <div class="intro-note"><strong>How to read this page</strong>Follow the three timelines independently. Each milestone links to a paper, benchmark, or primary project so the evidence can be checked.</div>
+    <p>This page is an exploratory attempt to bring together evidence on how AI is being applied across financial services—and to offer a snapshot of where the industry is today. It follows a progression from financial LLMs, through evaluations of financial knowledge using CFA-style examinations, to the emergence of financial agents (including Anthropic's Financial Services agent toolkit) and the benchmarks used to assess their capabilities. The aim is not to provide an exhaustive review or declare a single winner, but to connect these developments and make the evolving landscape easier to understand.</p>
+    <div class="intro-note"><strong>How to read this page</strong>The four timelines cover related but distinct dimensions: financial LLMs, professional knowledge evaluations, workflow agents, and benchmarks. Milestones link to research papers, benchmark documentation, or primary project sources wherever possible. This is a work in progress; coverage and evidence will evolve as the field develops.</div>
   </div>
+
+
+  <section id="models">
+    <div class="section-head">
+      <div><div class="section-no">01 · Financial LLMs</div><h2>From domain models to finance-focused LLMs</h2></div>
+      <p>This timeline follows selected models trained or adapted for financial language and tasks. It distinguishes encoder-based domain models from generative LLMs and open adaptation frameworks; the models are not directly comparable by size or benchmark score.</p>
+    </div>
+    <div class="timeline">
+      <article class="event">
+        <div class="year">2019–21</div>
+        <div class="event-card">
+          <h3>FinBERT brings domain adaptation to financial text</h3>
+          <p>FinBERT adapts BERT to financial language, initially targeting tasks such as financial sentiment analysis. Follow-on variants explore additional financial corpora and pretraining strategies. This is the specialist-model foundation before the generative LLM wave.</p>
+          <div class="metric-row"><span class="metric">BERT-based encoder</span><span class="metric teal">Financial NLP</span></div>
+          <a class="source" href="https://arxiv.org/abs/1908.10063">Read the FinBERT paper ↗</a>
+        </div>
+      </article>
+      <article class="event">
+        <div class="year">2022</div>
+        <div class="event-card">
+          <h3>FLANG extends financial-domain pretraining</h3>
+          <p>FLANG explores domain-adaptive language modeling for financial NLP and contributes to the move from task-specific sentiment models toward broader financial text understanding.</p>
+          <div class="metric-row"><span class="metric">Domain-adaptive pretraining</span><span class="metric gold">Pre-generative LLM era</span></div>
+          <a class="source" href="https://arxiv.org/abs/2211.00083">Read the FLANG paper ↗</a>
+        </div>
+      </article>
+      <article class="event">
+        <div class="year">2023</div>
+        <div class="event-card">
+          <h3>BloombergGPT demonstrates large-scale finance-focused pretraining</h3>
+          <p>Bloomberg introduces a 50-billion-parameter model trained on a mixture of financial and general-purpose data. Its paper describes a 363-billion-token financial dataset, augmented with 345 billion public-dataset tokens, and evaluates both financial and general NLP tasks.</p>
+          <div class="metric-row"><span class="metric teal">BloombergGPT · 50B parameters</span><span class="metric">Mixed financial + general corpus</span></div>
+          <a class="source" href="https://arxiv.org/abs/2303.17564">Read the BloombergGPT paper ↗</a>
+          &nbsp;·&nbsp; <a class="source" href="https://bloomberg.com/company/press/bloomberggpt-50-billion-parameter-llm-tuned-finance">Bloomberg announcement ↗</a>
+        </div>
+      </article>
+      <article class="event">
+        <div class="year">2023</div>
+        <div class="event-card">
+          <h3>Open financial LLM development accelerates: FinGPT and FinMA</h3>
+          <p>FinGPT emphasizes open, data-centric pipelines for collecting and curating financial data, with parameter-efficient adaptation such as LoRA. FinMA explores instruction-tuned financial models built on open foundation models. The emphasis shifts toward reproducible adaptation and task-specific assistants, rather than only training a very large model from scratch.</p>
+          <div class="metric-row"><span class="metric teal">Open model ecosystem</span><span class="metric">Instruction tuning · LoRA</span></div>
+          <a class="source" href="https://arxiv.org/abs/2306.06031">FinGPT paper ↗</a>
+          &nbsp;·&nbsp; <a class="source" href="https://arxiv.org/abs/2306.05443">PIXIU / FinMA paper ↗</a>
+        </div>
+      </article>
+      <article class="event">
+        <div class="year">2024</div>
+        <div class="event-card">
+          <h3>Open FinLLMs diversify across backbones, languages and tasks</h3>
+          <p>Financial adaptations based on Llama-family and other open models proliferate, including FinLlama, FinTral, InvestLM and multilingual variants. The field becomes less about one monolithic finance model and more about adapting foundation models to specific datasets, languages and use cases.</p>
+          <div class="metric-row"><span class="metric">Multiple foundation-model families</span><span class="metric gold">Task- and language-specific</span></div>
+          <a class="source" href="https://arxiv.org/abs/2402.02315">Read the FinLLMs survey ↗</a>
+          &nbsp;·&nbsp; <a class="source" href="https://arxiv.org/abs/2406.11903">Financial LLM applications survey ↗</a>
+        </div>
+      </article>
+      <article class="event">
+        <div class="year">2024–26</div>
+        <div class="event-card">
+          <h3>Evaluation and governance become part of the FinLLM lifecycle</h3>
+          <p>Research attention expands beyond releasing financial LLMs toward systematic evaluation, readiness and governance. Open financial-LLM leaderboard efforts aim to compare models across defined financial task families. This is a shift in the ecosystem—not evidence that one financial model has become universally best.</p>
+          <div class="metric-row"><span class="metric teal">Evaluation and leaderboard efforts</span><span class="metric">Governance and readiness</span></div>
+          <a class="source" href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/adb1d9fa8be4576d28703b396b82ba1b-Abstract-Datasets_and_Benchmarks_Track.html">See the NeurIPS FinBen benchmark paper ↗</a>
+        </div>
+      </article>
+    </div>
+    <div class="callout"><strong>What changed?</strong> The progression is not simply “bigger models.” It runs from domain-specific encoders, to large financial pretraining (BloombergGPT), to open and parameter-efficient adaptation (FinGPT and FinMA), and then to a broader ecosystem of task-specific models, evaluation and governance. In banking, a financial model still needs current approved data, controlled retrieval, rigorous validation and human oversight.</div>
+  </section>
 
   <section id="cfa">
     <div class="section-head">
-      <div><div class="section-no">01 · CFA progress</div><h2>From exam questions to advanced reasoning</h2></div>
+      <div><div class="section-no">02 · CFA progress</div><h2>From exam questions to advanced reasoning</h2></div>
       <p>Published studies use mock CFA material. They are useful measures of selected financial knowledge and reasoning—not official CFA Institute exam results or professional credentials.</p>
     </div>
     <div class="timeline">
@@ -212,8 +282,8 @@ footer .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wr
         <div class="year">2025</div>
         <div class="event-card">
           <h3>Reasoning models make a substantial step at Level III</h3>
-          <p>A study of 23 models tested mock Level III material, including multiple-choice and constructed-response questions. It reported 79.1% for o4-mini and 75.9% for Gemini 2.5 Pro, above the paper's estimated passing threshold.</p>
-          <div class="metric-row"><span class="metric teal">o4-mini · 79.1%</span><span class="metric">Gemini 2.5 Pro · 75.9%</span></div>
+          <p>A study of 23 models tested mock Level III material, including multiple-choice and constructed-response questions. It reported a 79.1% composite score for o4-mini and 77.3% for Gemini 2.5 Flash under its revised essay-grading methodology.</p>
+          <div class="metric-row"><span class="metric teal">o4-mini · 79.1%</span><span class="metric">Gemini 2.5 Flash · 77.3%</span></div>
           <a class="source" href="https://arxiv.org/abs/2507.02954">Read the Level III study ↗</a>
         </div>
       </article>
@@ -233,7 +303,7 @@ footer .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wr
 
   <section id="agents">
     <div class="section-head">
-      <div><div class="section-no">02 · Financial agents</div><h2>From a chatbot to a digital analyst team</h2></div>
+      <div><div class="section-no">03 · Financial agents</div><h2>From a chatbot to a digital analyst team</h2></div>
       <p>An agent combines a language model with instructions, specialist skills, data connectors and tools. It can coordinate multiple steps and prepare work for human review.</p>
     </div>
     <div class="timeline">
@@ -275,7 +345,7 @@ footer .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wr
 
   <section id="benchmarks">
     <div class="section-head">
-      <div><div class="section-no">03 · Benchmarking</div><h2>How financial AI progress is measured</h2></div>
+      <div><div class="section-no">04 · Benchmarking</div><h2>How financial AI progress is measured</h2></div>
       <p>Benchmarks turn broad claims into defined tests. Each one measures a slice of capability; no single score captures “financial intelligence.”</p>
     </div>
     <div class="visual-grid">
@@ -333,9 +403,11 @@ footer .footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wr
         <div class="year">2026</div>
         <div class="event-card">
           <h3>Benchmark directories and leaderboards track a wider field</h3>
-          <p>Independent trackers now catalogue dozens of financial benchmarks and compare models across distinct task families. Treat these as living directories, not a universal standardized ranking: metrics, test sets and coverage differ.</p>
-          <a class="source" href="https://benchmarks.finance/benchmarks/">Browse the benchmark directory ↗</a>
-          &nbsp;·&nbsp; <a class="source" href="https://financebenchmark.ai/">Explore FinanceBenchmark ↗</a>
+          <p>Third-party directories catalogue a growing set of financial benchmarks across distinct task families. Treat them as discovery tools, not authoritative standards or universal rankings: metrics, test sets and coverage differ.</p>
+          <a class="source" href="https://financebenchmark.ai/">Explore FinanceBenchmark ↗</a>
+          &nbsp;·&nbsp; <a class="source" href="https://financebenchmark.ai/methodology">Review its methodology ↗</a>
+          <p class="small" style="margin-top:8px">A third-party resource that aggregates published financial AI benchmark results and reports its own evaluations. Review its scoring methodology, source attribution and disclosures before interpreting composite rankings.</p>
+          <a class="source" href="https://benchmarks.finance/benchmarks/">Browse the finance AI benchmark directory ↗</a>
         </div>
       </article>
     </div>
